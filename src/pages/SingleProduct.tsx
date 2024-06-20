@@ -14,9 +14,6 @@ interface Product {
 }
 
 function SingleProduct() {
-  const [reviewsCount, setReviewsCount] = useState(
-    Math.round(Math.random() * 400) + 100
-  );
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const dispatch = useDispatch();
@@ -34,7 +31,6 @@ function SingleProduct() {
     if (type === "decrease" && productAmount > 1) {
       setProductAmount((prev) => prev - 1);
     } else if (type === "increase" && productAmount < 9) {
-      // Updated limit
       setProductAmount((prev) => prev + 1);
     }
   };
@@ -91,7 +87,7 @@ function SingleProduct() {
                 </svg>
               ))}
               <h4 className="text-gray-800 text-base">
-                {reviewsCount} Reviews
+                {Math.floor(Math.random() * (400 - 100 + 1)) + 100} Reviews
               </h4>
             </div>
 
