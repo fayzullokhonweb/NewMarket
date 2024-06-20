@@ -55,7 +55,7 @@ function Cart() {
                         Remove
                       </button>
 
-                     
+
                     </div>
                   </div>
                   <div className="ml-auto flex flex-col items-end gap-1">

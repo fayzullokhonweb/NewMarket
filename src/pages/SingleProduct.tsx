@@ -11,6 +11,7 @@ interface Product {
   price: number;
   rating: number;
   discountPercentage: number;
+  description: string;
 }
 
 function SingleProduct() {
@@ -108,27 +109,7 @@ function SingleProduct() {
             </div>
 
             <div className="mt-8">
-              <h3 className="text-xl font-bold text-gray-800">
-                Choose a Color
-              </h3>
-              <div className="flex flex-wrap gap-3 mt-4">
-                <button
-                  type="button"
-                  className="w-10 h-10 bg-black border-2 border-white hover:border-gray-800 rounded-full shrink-0 transition-all"
-                ></button>
-                <button
-                  type="button"
-                  className="w-10 h-10 bg-gray-300 border-2 border-white hover:border-gray-800 rounded-full shrink-0 transition-all"
-                ></button>
-                <button
-                  type="button"
-                  className="w-10 h-10 bg-gray-100 border-2 border-white hover:border-gray-800 rounded-full shrink-0 transition-all"
-                ></button>
-                <button
-                  type="button"
-                  className="w-10 h-10 bg-blue-400 border-2 border-white hover:border-gray-800 rounded-full shrink-0 transition-all"
-                ></button>
-              </div>
+              <p className="line-clamp-3 text-base font-medium"> {product.description}</p>
             </div>
             <div className="mt-6 flex items-center justify-center p-2 w-32 border border-gray-300 text-gray-800 text-xs outline-none bg-transparent rounded-md">
               <button
